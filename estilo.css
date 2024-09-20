@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border:1px solid #ccc;
+}
+main{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-auto-rows: 200px;
+    grid-gap: .5rem;
+
+    grid-template-areas: 
+    "menul  area2 area2  menur"
+    "menul  area2 area2  menur"
+    "menul  area2 area2  menur"
+    "menul  area2 area2  menur"
+    "menul  area2 area2  menur"
+    ;
+}
+.area1{
+   grid-area: menul;
+   background-color: rgba(220, 20, 60, 0.199); 
+}
+.area2{
+   grid-area: area2;
+   background-color: rgba(0, 255, 255, 0.295);
+   display: grid;
+   grid-template-columns: repeat(3,1fr);
+   grid-auto-rows: 200px;
+   grid-gap: .2rem;
+   grid-template-areas: 
+   " h h h "
+   " g g g "
+   " g g g "
+   " c c c "
+   " c c c "
+   ;
+}
+.area3{
+   grid-area: menur;
+   background-color: rgba(184, 135, 11, 0.329); 
+}
+/*corpo*/
+.barra-cabecalho{
+    grid-area: h;
+    background-color: rgba(0, 100, 0, 0.322);
+}
+.graficos{
+    grid-area: g;
+    background-color: rgba(139, 0, 0, 0.37);
+    display: flex;
+}
+.cards{
+    grid-area: c;
+    background-color: rgba(255, 105, 180, 0.356);
+}
+/*conteudo*/
+.grafico_linha{
+    border: 1px solid greenyellow;
+    flex-grow: 1;
+}
+.graf_auxiliar{
+    border: 1px solid blueviolet;
+    flex-grow: 0.4;
+    display: flex;
+    flex-direction: column;
+}
+.graf_auxiliar .cartoes-auxiliares{
+    border: 1px solid peru;
+    flex-grow: 1;
+}
+

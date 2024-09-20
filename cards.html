@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards estilo</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="cards.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <main>
+        <div class="linha">
+            <div class="boxCards">
+                <div class="card-simples">
+                    <div class="logoBox">
+                        <img src="./img/shoes.svg" alt="docs_img" srcset="">
+                        <!-- <svg>
+                            <use href="./img/shoes.svg" style="--color_fill: #fff;"></use>
+                        </svg> -->
+                    </div>
+                    <div class="textBox">
+                        <div class="titulo">
+                            Daly Jogging
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="linha">
+            <div class="boxCards">
+                <div class="card-v2">
+                    <div class="card-head">
+                        <div class="logoBox">
+                            <img src="./img/shoes.svg" alt="docs_img" srcset="">
+                        </div>
+                        <div class="textBox">
+                            <div class="titulo">
+                                My Jogging
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <div class="infoBox">
+                            <div class="supra-titulo">
+                                Total Timer
+                            </div>
+                            <div class="principal-info">
+                                748 hr
+                            </div>
+                            <div class="mes-da-acao">
+                                July
+                            </div>
+                        </div>
+                        <div class="btnBox">
+                            <img src="./img/seta_direita.png" alt="" srcset="">
+                        </div>
+                    </div>
+                </div>
+            </div>            
+        </div>
+        <div class="linha mt-1">
+            <h3>cards rodape</h3>
+            <div class="card-v3">
+                <div class="imgBox">
+                    <img src="./img/bycicleman_icon.png" alt="">
+                </div>
+                <div class="card-head">
+                    
+                    <div class="infoBox">
+                        <div class="titulo">
+                            Bicycle Drill
+                        </div>
+                        <div class="subInfo">
+                            36km/weeks
+                        </div>
+                    </div>
+                    <div class="menu_dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="progressBox">
+                        <div class="infoProgressBox">
+                            <div class="titulo_progess">Progress</div>
+                            <div class="percents">35%</div>
+                        </div>
+                        <!-- <progress id="file" value="32" max="100"> 32% </progress> -->
+                        <div class="barra_progresso"></div>
+                    </div>
+                    <div class="auxInfo">
+                        <div class="kmtrs">
+                            17/36km
+                        </div>
+                        <div class="infoDaysLeft">
+                            2 days left
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="linha mt-2">
+            <div class="card-v4">
+                <div class="card-head">
+                    <div class="titulo">Overview</div>
+                    <div class="btn_acao">monthly</div>
+                </div>
+                <div class="card-body">
+                    <div class="grafico">
+                        <canvas id="linha" style="width: 130px"></canvas>
+                    </div>
+                    <div class="sombra-esmaecida"></div>
+                    <div class="abas">
+                        <div class="aba aba-1">
+                            <div class="abaBox">
+                                <div class="subTitulo">
+                                    Total Time
+                                </div>
+                                <div class="princInfo">
+                                    748 Hr
+                                </div>
+                                <div class="mesInfo">
+                                    April
+                                </div>
+                            </div>
+                        </div>
+                        <div class="aba aba-2 ativo">
+                            <div class="abaBox">
+                                <div class="subTitulo">
+                                    Total Steps
+                                </div>
+                                <div class="princInfo">
+                                    9.178 St
+                                </div>
+                                <div class="mesInfo">
+                                    April
+                                </div>
+                            </div>
+                        </div>
+                        <div class="aba aba-3">
+                            <div class="abaBox">
+                                <div class="subTitulo">
+                                    Target
+                                </div>
+                                <div class="princInfo">
+                                    9.200 St
+                                </div>
+                                <div class="mesInfo">
+                                    April
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+         const linha = document.querySelector('#linha');
+         const linha_ctx = linha.getContext('2d');
+
+         var gradient = linha_ctx.createLinearGradient(0, 0, 0, 170);
+             gradient.addColorStop(0, 'green');   
+             gradient.addColorStop(1, 'blue');
+         		//linha
+		new Chart(linha, {
+		    type: 'line',
+		    data: {
+                labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                datasets: [{
+                    //fillColor:'green',
+					label: 'My First Dataset',
+					data: [65, 59, 80, 81, 56, 55, 40],
+					// fill: true,
+                    fill: {
+                        target: 'origin',
+                        above: '#bbbbbb26',   // Area will be red above the origin
+                        below: '#a52a2a8a'    // And blue below the origin
+                    },
+                    // back
+                    // backgroundColor:'red', vai ser a cor dos marcadores
+                    // backgroundColor: (context)=>{
+                    //    if(!context.chart.chartArea){
+                    //     return;
+                    //    }
+                    //    const {ctx, data, chartArea:{top,bottom} } = context.chart;
+                    //    const gradientBg = ctx.createLinearGradient(0,top,0,bottom)
+                    //    gradientBg.addColorStop(0,'#bbbbbb26')
+                    //    gradientBg.addColorStop(1,'#a52a2a8a')
+                    //    return gradientBg
+                    // },
+					borderColor: 'rgb(75, 192, 192)',
+					tension: 0.1
+				}]
+		    },
+		    options: {
+				scales:{
+					y:{
+						grid:{
+							display:false
+						},
+                        ticks:{
+							display:false
+						}
+					},
+                    x:{
+                        ticks: {
+                            color:'#fff'
+                        }
+                    }
+				},
+                plugins: {
+                    legend: {
+                    display: false
+                    }
+                }
+		    	// scales:{
+		    	// 	grid:{
+				// 		display:true
+				// 	}
+		    	// }
+		    }
+		});
+    </script>
+</body>
+</html>

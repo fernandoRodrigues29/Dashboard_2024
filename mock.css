@@ -1,0 +1,115 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  .menu_esquerdo{
+    grid-area: menu_esquerdo;
+    background-color: aqua;
+    position: relative;
+  }
+  .conteudo_central{
+    grid-area: conteudo_central;
+    background-color: brown;
+    position: relative;
+  }
+  .menu_direito{
+    grid-area: menu_direito;
+    background-color: blueviolet;
+    position: relative;
+  }
+  main{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 15vw 60vw 25vw;
+    grid-template-rows: auto;
+    grid-template-areas: "menu_esquerdo conteudo_central menu_direito";
+    gap: 8px;
+    
+  }
+  /* conteudo central */
+  .conteudo_central .cab-content-central{
+    width: 100%;
+    height: 22%;
+    background-color: darkcyan;
+  }
+  .conteudo_central  .conteudo-central-1-linha{
+    display: grid;
+    grid-template-columns: 4fr 1.6fr;
+    grid-template-rows: 50vh;
+    gap: 8px;
+
+  }
+  .conteudo_central .conteudo-central-2-linha{
+    display: grid;
+    /* grid-template-columns: repeat(3,1fr); */
+    grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+    grid-template-rows: 25vh;
+    gap: 8px;
+    padding-top: 8px 8px;
+  }
+  .conteudo_central .conteudo-central-2-linha .card{
+    border: 1px solid #c3c3c3;
+
+  }
+  
+  .conteudo_central  .conteudo-central-1-linha .grafico{
+    background-color: chartreuse;
+  }
+
+  .conteudo_central  .conteudo-central-1-linha .cards-verticais{
+    background-color: darkorange;
+  }
+  /* conteudo central */
+  @media (max-width: 780px) {
+    .menu_esquerdo{
+      display: none;
+    }
+    main{
+      width: 100vw;
+      height: 100vh;
+      display: grid;
+      grid-template-columns: 100vw;
+      grid-template-rows: 100vh 50vh;
+      grid-template-areas: "conteudo_central" 
+                           "menu_direito";
+      gap: 8px;
+      
+    }
+  }
+  @media (max-width: 475px) {
+    .conteudo_central .cab-content-central {
+      width: 100%;
+      height: 10%;
+      background-color: darkcyan;
+    }
+    main{
+      width: 100vw;
+      display: grid;
+      grid-template-columns: 100vw;
+      grid-template-rows: 170vh 50vh;
+      grid-template-areas: "conteudo_central" 
+                           "menu_direito";
+      gap: 8px;
+      
+    }
+    .conteudo_central  .conteudo-central-1-linha{
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 50vh 23vh;
+      gap: 2px;
+    }
+    .conteudo_central .conteudo-central-2-linha{
+      display: grid;
+      grid-template-columns: 100vw;
+      grid-template-rows: 25vh 25vh 25vh;
+      gap: 2px;
+      padding-top: 8px 8px;
+    }
+    .conteudo_central .conteudo-central-2-linha .card {
+      border: 1px solid #c3c3c3;
+      height: 26vh;
+    }
+  }

@@ -1,0 +1,309 @@
+.boxCards{
+    width: 23vw;
+    max-width: 30vw;
+    position: relative;
+   padding: 8px 16px;
+}
+.card-simples{
+    width: 90%;
+    height: 16vh;
+    border-radius: 24px;
+    background-color: #8d7eda;
+    margin: 8px 8px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.logoBox{
+    background-color: #f0f8ff36;
+    padding: 8px;
+    border-radius: 22px;
+    box-shadow: 1px 1px 2px 1px #fff;
+}
+.logoBox img{
+    max-width: 48px;
+    filter: invert(1);
+}
+.textBox{
+    color: #fff;
+    font-size: 1.2em;
+}
+/*card v2*/
+.card-v2{
+    background-color: #dd5983ed;
+    padding: 16px;
+    border-radius: 36px;
+    position: relative;
+    padding-top: 50%;
+    background-image: url(./img/grafico_linha_dash.png);
+    background-size: 9rem;
+    background-repeat: no-repeat;
+    background-position: bottom -1px right -2px;
+}
+.card-v2 .card-head{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 13px 16px;
+    border-radius: 32px;
+    background: #ffc4e15c;
+    width: 100%;
+    box-shadow: 0px 1px 8px .001px #fff;
+    align-items: center;
+    justify-content: space-around;
+}
+.card-v2 .card-body{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+   
+}
+
+.infoBox .supra-titulo{
+    font-size: .9rem;
+    color: #fff;
+}
+.infoBox .principal-info{
+    font-size: 1.7rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    color: #fff;
+}
+.infoBox .mes-da-acao {
+    letter-spacing: 1px;
+    color: #fff;
+}
+.btnBox img{
+    max-width: 2rem;
+}
+/*cards rodape*/
+.card-v3{
+    width: 24vw;
+    padding-top: 4rem;
+    padding-bottom: .8rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-color: #fff;
+    border-radius: 24px;
+    position: relative;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+.card-v3 .card-head {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.card-v3  .imgBox{
+    position: absolute;
+    width: 5.5rem;
+    height: 5rem;
+    display: flex;
+    border-radius: 30px;
+    background-color: #8d7eda;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 1px 2px 3px 1px #ccc;
+}
+.card-v3 .imgBox img{
+    max-width: 3rem;
+}
+.card-v3 .auxInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4vh 2vh;
+}
+.card-v3 .auxInfo .kmtrs{
+    font-size: .8rem;
+    color: #5a5a5a;
+}
+.card-v3 .auxInfo .infoDaysLeft{
+    color: red;
+    font-size: .8rem;
+    padding: 8px;
+    border-radius: 16px;
+    background-color: #fbdfe8;
+}
+
+.card-v3 .card-head .infoBox .titulo{
+    font-size: 1.4rem;
+    color: #2a135e;
+    text-shadow: 1px 2px 5px #ccc;
+}
+
+.card-v3 .card-head .infoBox .subInfo{
+    margin-top: .9vh;
+    color: #5b5b5b;
+    letter-spacing: 1.3px;
+}
+
+.card-v3 .card-head .auxInfo .subInfo{
+    font-size: .9rem;
+    color: #686666;
+    letter-spacing: 2px;
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+}
+
+.card-v3 .menu_dots{
+    position: absolute;
+    right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: .3rem;
+    transform: translate(0px, -200%);
+    cursor: pointer;
+}
+.card-v3 .menu_dots span{
+    width: .3rem;
+    height: .3rem;
+    border-radius: 50%;
+    background-color: rgb(161, 161, 161);
+   
+}
+/*progress bar*/
+.card-v3 .progressBox{
+    height: 1vh;
+    border-radius: 8px;
+    background-color: #b1b1b1;
+    margin-top: 5vh;
+    position: relative;
+    width: 100%;
+}
+
+.progressBox .barra_progresso{
+    width: 18%;
+    height: 100%;
+    position: relative;
+    border-radius: 8px;
+    background-color: #3fbe26;
+}
+
+.progressBox .infoProgressBox{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(0px, -24px);
+    width: 100%;
+}
+/*card garficos*/
+.card-v4{
+    width: 40vw;
+    padding-top: 4rem;
+    padding-bottom: .8rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    background-image: linear-gradient(1deg, #1c0e62, #7b6ec0);
+    border-radius: 24px;
+    position: relative;
+}
+.card-v4 .card-head{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 24px;
+}
+.card-v4 .card-head .titulo{
+    color: #fff;
+}
+.card-v4 .card-head .btn_acao {
+    color: #ffffff8f;
+    border: 1px solid #ffffff87;
+    padding: 5px 36px;
+    border-radius: 16px;
+}
+.card-v4 .card-body .abas {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 5vh;
+    position: relative;
+}
+.card-v4 .card-body .abas .aba {
+    padding: 8px 16px;
+    /* border-radius: 16px; */
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    width: 8.7rem;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.card-v4 .card-body .abas .aba.ativo {
+    border: 1px solid #ffffff8f;
+    border-top-color: #3320;
+    background-color: #4c4086;
+    z-index: 9;
+  }
+  .aba.ativo::before {
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    background: #322478;
+    border-top: 1px solid #ffffff8f;
+    border-right: 1px solid #ffffff8f;
+    position: absolute;
+    left: -17px;
+    top: -.8px;
+    border-top-right-radius: 16px;
+    box-shadow: 3.7px -4.4px 1.5px 2px #4c4087;
+    z-index: 90;
+}
+.aba.ativo::after {
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    background: #332578;
+    border-top: 1px solid #ffffff8f;
+    border-left: 1px solid #ffffff8f;
+    position: absolute;
+    right: -17px;
+    top: -.8px;
+    border-top-left-radius: 16px;
+    box-shadow: -3.3px -4.4px 1.5px 2px #4c4087;
+    z-index: 90;
+}
+.abaBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+}
+.abaBox .subTitulo {
+    font-size: .7rem;
+    color: #c3c3c3;
+}
+.abaBox .princInfo {
+    font-size: 1.3rem;
+}
+.mesInfo {
+    font-size: .7rem;
+    color: #c3c3c3;
+}
+.sombra-esmaecida{
+    width: 79%;
+    height: 24%;
+    background-image: linear-gradient(359deg, #bbbbbb26 46%, transparent);
+    position: absolute;
+    border-radius: 64px;
+    top: 50%;
+    left: 0;
+    transform: translateX(12%);
+    box-shadow: 0px 1px 1px 0px #ffffff82;
+    z-index: 0;
+}
